@@ -1,0 +1,36 @@
+.footer {
+  background: #333333;
+  .footer_down {
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    box-sizing: border-box;
+    p {
+      color: rgba(245, 245, 245, 0.847);
+      padding: 10px 0 20px 0;
+      line-height: 1.6;
+    }
+
+    span {
+      color: #b23f44;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .footer_one {
+      min-width: 200px;
+      flex: 1;
+    }
+    .footer_two {
+      min-width: 200px;
+      flex: 3;
+    }
+    .footer_three {
+      min-width: 200px;
+      flex: 4;
+    }
+  }
+}
