@@ -1,0 +1,79 @@
+.wrapper {
+  padding: 60px 0;
+  .content {
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #222;
+      font-size: 32px;
+      font-weight: 700;
+    }
+    .bord {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      .box {
+        background: url("https://static.tildacdn.one/tild3965-3166-4130-b538-306664396338/IMG_4188.JPG");
+        width: 100%;
+        max-width: 300px;
+        height: 400px;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 20px;
+
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+          transform: translateY(-8px);
+          box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+        }
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.6) 40%,
+            rgba(0, 0, 0, 0.1) 100%
+          );
+          z-index: 0;
+        }
+
+        .hr {
+          width: 100%;
+          max-width: 200px;
+          height: 2px;
+          background-color: #fff;
+          margin-bottom: 10px;
+          position: relative;
+          z-index: 1;
+        }
+
+        h2 {
+          font-size: 22px;
+          margin-bottom: 10px;
+          z-index: 1;
+          position: relative;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 1.4;
+          margin-bottom: 15px;
+          z-index: 1;
+          position: relative;
+        }
+      }
+    }
+  }
+}
