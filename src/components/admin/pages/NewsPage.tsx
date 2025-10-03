@@ -14,7 +14,6 @@ const NewsPage = () => {
 
         <div className={scss.form}>
           <input type="text" placeholder="Title" />
-          <textarea rows="5" placeholder="Description"></textarea>
           <input type="file" />
           <button>Save</button>
         </div>
