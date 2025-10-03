@@ -1,4 +1,4 @@
-import Layout from "@/components/client/layout/Layout";
+import AdminLayout from "@/components/admin/layout/AdminLayout";
 import React, { FC, ReactNode } from "react";
 
 interface ILayout {
@@ -6,7 +6,11 @@ interface ILayout {
 }
 
 const layout: FC<ILayout> = ({ children }) => {
-  return <Layout>{children}</Layout>;
+  return (
+    <>
+      <AdminLayout>{children}</AdminLayout>
+    </>
+  );
 };
 
 export default layout;

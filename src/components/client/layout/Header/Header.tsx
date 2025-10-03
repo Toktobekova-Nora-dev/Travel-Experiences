@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Img from "../../../../public/logo.png";
+import Img from "../../../../../public/logo.png";
 import scss from "./Header.module.scss";
 const Header = () => {
   return (
