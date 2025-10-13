@@ -6,7 +6,7 @@ const Home = () => {
     <section
       className={scss.hero}
       style={{
-        backgroundImage: `url(${"https://cf.youtravel.me/tr:w-1980%2Ch-800/upload/iblock/7d3/7d33fa55d64caaf4995cfd5dbf9d1774.jpg"})`,
+        backgroundImage: `url(${"https://24.kg/files/media/257/257252.jpg"})`,
         width: "100%",
         height: "100vh",
         backgroundSize: "cover",

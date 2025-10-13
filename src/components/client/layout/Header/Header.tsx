@@ -23,7 +23,7 @@ const Header = () => {
                 <a href="/destinations">Destinations</a>
               </li>
               <li>
-                <a href="/booking">Booking</a>
+                <a href="/book">Booking</a>
               </li>
               <li>
                 <a href="/about">About Us</a>
