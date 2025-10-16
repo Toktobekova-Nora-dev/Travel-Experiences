@@ -1,5 +1,6 @@
 import React from "react";
 import scss from "./Footer.module.scss";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const Footer = () => {
   return (
@@ -26,15 +27,13 @@ const Footer = () => {
             <p>
               <span>Secure Payment</span>
               <br />
-              Book tours through our <br />
-              reliable payment system
+              Book tours through our reliable payment system
             </p>
             <p>
               <span>Well-Planned Spontaneity</span>
               <br />
               Routes can adapt to the group’s preferences
             </p>
-
             <p>
               <span>Travel Journal</span>
               <br />
@@ -55,6 +54,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <ThemeToggle />
     </footer>
   );
 };

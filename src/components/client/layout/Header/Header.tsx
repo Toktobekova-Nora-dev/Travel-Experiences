@@ -25,9 +25,6 @@ const Header = () => {
               <li>
                 <a href="/book">Booking</a>
               </li>
-              <li>
-                <a href="/about">About Us</a>
-              </li>
             </ul>
           </nav>
         </div>

@@ -1,29 +1,66 @@
+"use client";
 import React from "react";
 import scss from "./Home.module.scss";
-import heroImage from "../../../public/roys-peak-track.webp";
+const destinations = [
+  {
+    name: "Bishkek",
+    img: "https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQP8ltVzTgyt31grKtiT_75bWBBDwPqm8qb2Z4q784aH2kb3kVeZgbLaZTAOLLRzzpT2jGtwBcyCjm8bAzRVXpI8mxald0r",
+  },
+  {
+    name: "Issyk-Kul",
+    img: "https://www.advantour.com/img/kyrgyzstan/bishkek/ala-too-square10.jpg",
+  },
+  {
+    name: "Karakol",
+    img: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/c7/90/94/caption.jpg?w=500&h=400&s=1",
+  },
+  {
+    name: "Ala-Archa",
+    img: "https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcR4j9N6CuZr0-HJrvGbupz6vCkCRoSb_FGg2OXHgb5FzLEkNz49INtBwdAHMxlOMKFnRGVzQgdw-sb_NzSoUFZRDLl6YcTU",
+  },
+];
+
 const Home = () => {
   return (
-    <section
-      className={scss.hero}
-      style={{
-        backgroundImage: `url(${"https://24.kg/files/media/257/257252.jpg"})`,
-        width: "100%",
-        height: "100vh",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
-      <div className={scss.hero_block}>
-        <div className={scss.box}>
-          <h1>
-            Unique travel
-            <br />
-            experiences
-          </h1>
-          <button className={scss.btn}>Learn more</button>
+    <div className={scss.wrapper}>
+      <section className={scss.hero}>
+        <div className={scss.heroOverlay}></div>
+        <div className={scss.heroContent}>
+          <h1>Kyrgyzstan</h1>
+          <p>
+            Explore breathtaking mountains, turquoise lakes, and ancient culture
+            in the heart of Central Asia.
+          </p>
+          <div className={scss.buttons}>
+            <button className={scss.primary}>Book Hotel</button>
+            <button className={scss.outline}>Routes</button>
+            <button className={scss.outline}>Add to Favorites</button>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section className={scss.infoBar}>
+        <div className="container">
+          <span>☀️ 22°C</span>
+          <span>🗓 May–September</span>
+          <span>🗣 Kyrgyz / Russian</span>
+          <span>💰 Som (KGS)</span>
+          <span>🕒 GMT+6</span>
+        </div>
+      </section>
+
+      <section className="container">
+        <h2 className={scss.sectionTitle}>Popular Destinations</h2>
+        <div className={scss.cards}>
+          {destinations.map((dest, i) => (
+            <div key={i} className={scss.card}>
+              <img src={dest.img} alt={dest.name} />
+              <h3>{dest.name}</h3>
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
   );
 };
 

@@ -20,7 +20,7 @@ const DestinationsPage = () => {
               <h1>Issyk-Kul</h1>
               <button className={scss.saveBtn}>♡ Save</button>
             </div>
-            <a href="/kyrgyzstan" className={scss.countryLink}>
+            <a href="/book" className={scss.countryLink}>
               kyrgyzstan
             </a>
             <p>
