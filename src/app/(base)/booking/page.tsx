@@ -1,10 +1,10 @@
-import BookPagePage from "@/components/client/page/BookPagePage";
+import BookingPage from "@/components/client/page/BookingPage";
 import React from "react";
 
 const page = () => {
   return (
     <div>
-      <BookPagePage />
+      <BookingPage />
     </div>
   );
 };

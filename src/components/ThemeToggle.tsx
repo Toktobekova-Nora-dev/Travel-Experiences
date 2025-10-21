@@ -18,16 +18,19 @@ export default function ThemeToggle() {
     <Button
       onClick={() => setDark(!dark)}
       style={{
-        padding: "8px 16px",
-        margin: "16px",
+        padding: "4px 8px",
         cursor: "pointer",
         border: "1px solid var(--text-color)",
-        background: "transparent",
+        background: `${
+          dark
+            ? "linear-gradient(80deg,rgba(219, 2, 2, 1) 0%, rgba(255, 247, 0, 1) 100%)"
+            : "linear-gradient(80deg,rgba(0, 0, 0, 1) 23%, rgba(0, 94, 217, 1) 100%)"
+        }  `,
         color: "var(--text-color)",
         borderRadius: "8px",
       }}
     >
-      {dark ? "Светлая тема ☀️" : "Тёмная тема 🌙"}
+      {dark ? " ☀️ " : " 🌙"}
     </Button>
   );
 }
