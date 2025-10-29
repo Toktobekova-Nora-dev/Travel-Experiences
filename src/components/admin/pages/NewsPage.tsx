@@ -36,7 +36,7 @@ const NewsPage = () => {
             {...register("name", { required: true, minLength: 10 })}
             className={scss.form_input}
             type="text"
-            placeholder="name"
+            placeholder="name"x
           />
           <input
             {...register("decription", {

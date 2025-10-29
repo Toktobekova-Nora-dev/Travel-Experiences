@@ -20,7 +20,7 @@ const Footer = () => {
             <Mountain className="w-10 h-10 text-green-600" />
             <div>
               <h1 className="text-2xl font-bold text-gray-900">
-                <span className="text-green-600">Sayakat</span>
+                <span className="text-green-600 ">Sayakat</span>
               </h1>
             </div>
           </div>
