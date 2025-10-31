@@ -93,57 +93,27 @@ const Header = () => {
             >
               Home
             </a>
+
             <a
-              href="#"
-              className="font-medium text-gray-700 transition-colors hover:text-green-600"
+              href="/destinations"
+              className="flex items-center gap-1 font-medium text-gray-700 transition-colors hover:text-green-600"
             >
-              Tours
+              Destinations
             </a>
-            <div className="relative group">
-              <button className="flex items-center gap-1 font-medium text-gray-700 transition-colors hover:text-green-600">
-                Destinations <ChevronDown className="w-4 h-4" />
-              </button>
-              <div className="absolute left-0 invisible w-48 mt-2 transition-all bg-white rounded-lg shadow-xl opacity-0 top-full group-hover:opacity-100 group-hover:visible">
-                <a
-                  href="#"
-                  className="block px-4 py-3 text-gray-700 transition-colors rounded-t-lg hover:bg-green-50 hover:text-green-600"
-                >
-                  Song-Kol Lake
-                </a>
-                <a
-                  href="#"
-                  className="block px-4 py-3 text-gray-700 transition-colors hover:bg-green-50 hover:text-green-600"
-                >
-                  Ala-Archa Park
-                </a>
-                <a
-                  href="#"
-                  className="block px-4 py-3 text-gray-700 transition-colors hover:bg-green-50 hover:text-green-600"
-                >
-                  Issyk-Kul Lake
-                </a>
-                <a
-                  href="#"
-                  className="block px-4 py-3 text-gray-700 transition-colors rounded-b-lg hover:bg-green-50 hover:text-green-600"
-                >
-                  Silk Road Sites
-                </a>
-              </div>
-            </div>
             <a
-              href="#"
+              href="about-us"
               className="font-medium text-gray-700 transition-colors hover:text-green-600"
             >
               About Us
             </a>
             <a
-              href="#"
+              href="blog"
               className="font-medium text-gray-700 transition-colors hover:text-green-600"
             >
               Blog
             </a>
             <a
-              href="#"
+              href="/contact"
               className="font-medium text-gray-700 transition-colors hover:text-green-600"
             >
               Contact

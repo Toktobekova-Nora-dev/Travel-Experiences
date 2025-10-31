@@ -63,44 +63,6 @@ const Footer = () => {
                 info@kyrgyztravel.com
               </a>
             </li>
-            <li className="flex flex-col gap-2 ">
-              <div className="flex items-center gap-3">
-                <div className="flex items-center justify-center w-12 h-12 bg-gray-800 rounded-full">
-                  <Shield className="w-6 h-6 text-green-400" />
-                </div>
-                <div>
-                  <p className="text-sm font-semibold">Secure Payment</p>
-                  <p className="text-xs text-gray-500">SSL Encrypted</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="flex items-center justify-center w-12 h-12 bg-gray-800 rounded-full">
-                  <Award className="w-6 h-6 text-green-400" />
-                </div>
-                <div>
-                  <p className="text-sm font-semibold">Licensed Agency</p>
-                  <p className="text-xs text-gray-500">Certified Guides</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="flex items-center justify-center w-12 h-12 bg-gray-800 rounded-full">
-                  <Star className="w-6 h-6 text-yellow-400 fill-yellow-400" />
-                </div>
-                <div>
-                  <p className="text-sm font-semibold">4.9/5 Rating</p>
-                  <p className="text-xs text-gray-500">500+ Reviews</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="flex items-center justify-center w-12 h-12 bg-gray-800 rounded-full">
-                  <Users className="w-6 h-6 text-green-400" />
-                </div>
-                <div>
-                  <p className="text-sm font-semibold">24/7 Support</p>
-                  <p className="text-xs text-gray-500">Always Available</p>
-                </div>
-              </div>
-            </li>
           </div>
 
           <p className="w-full text-sm text-center">
