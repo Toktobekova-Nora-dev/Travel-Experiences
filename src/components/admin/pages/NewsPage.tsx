@@ -4,61 +4,62 @@ import scss from "./NewsPage.module.scss";
 import { Avatar, Stack } from "@mui/material";
 import { useForm } from "react-hook-form";
 
-const NewsPage = () => {
+interface NewsItem {
+  name: string;
+  decription: string;
+  url: string;
+}
+
+const NewsPage: React.FC = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
-  } = useForm({
+  } = useForm<NewsItem>({
     defaultValues: {
-      name: "Nora",
-      decription: "Cute",
-      url: "Img",
+      name: "",
+      decription: "",
+      url: "",
     },
   });
 
-  console.log(errors);
-  return (
-    <div>
-      <div className={scss.content}>
-        <div className={scss.stack}>
-          <h1>Create News</h1>
-          <Stack direction="row" spacing={1}>
-            <Avatar alt="Admin" src="/static/images/avatar/2.jpg" />
-          </Stack>
-        </div>
+  const onSubmit = (data: NewsItem) => {
+    const existing = localStorage.getItem("newsList");
+    const parsed = existing ? JSON.parse(existing) : [];
+    const updated = Array.isArray(parsed) ? [...parsed, data] : [data];
+    localStorage.setItem("newsList", JSON.stringify(updated));
+    alert("✅ Новость сохранена!");
+    reset();
+  };
 
-        <form
-          onSubmit={handleSubmit((data) => console.log(data))}
-          className={scss.form}
-        >
-          <input
-            {...register("name", { required: true, minLength: 10 })}
-            className={scss.form_input}
-            type="text"
-            placeholder="name"
-          />
-          <input
-            {...register("decription", {
-              required: "This is required",
-              minLength: {
-                value: 50,
-                message: "min length is four 4",
-              },
-            })}
-            className={scss.form_input}
-            type="text"
-            placeholder="decription"
-          />
-          <input
-            {...register("url", { required: true })}
-            className={scss.form_input}
-            type="text"
-            placeholder="img"
-          />
-          <button>Save</button>
-        </form>
+  return (
+    <div className={scss.content}>
+      <div className={scss.stack}>
+        <h1>Create News</h1>
+        <Stack direction="row" spacing={1}>
+          <Avatar alt="Admin" src="/static/images/avatar/2.jpg" />
+        </Stack>
       </div>
+
+      <form onSubmit={handleSubmit(onSubmit)} className={scss.form}>
+        <input
+          {...register("name", { required: "Name is required" })}
+          className={scss.form_input}
+          placeholder="Name"
+        />
+        <input
+          {...register("decription", { required: "Description required" })}
+          className={scss.form_input}
+          placeholder="Description"
+        />
+        <input
+          {...register("url", { required: "Image URL required" })}
+          className={scss.form_input}
+          placeholder="Image URL"
+        />
+        <button type="submit">Save</button>
+      </form>
     </div>
   );
 };
